@@ -6,7 +6,7 @@
 #    By: yaboukir <yaboukir@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/10 16:08:56 by yaboukir          #+#    #+#              #
-#    Updated: 2025/02/14 15:23:47 by yaboukir         ###   ########.fr        #
+#    Updated: 2025/02/14 15:44:12 by yaboukir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,7 +52,7 @@ $(NAME_S): $(OBJS_S)
 #	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	$(RM) $(OBJS_C) $(OBJS_C) 
+	$(RM) $(OBJS_C) $(OBJS_S) 
 # $(OBJS_MINITALK_BONUS)
 
 fclean: clean
