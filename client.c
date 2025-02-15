@@ -6,7 +6,7 @@
 /*   By: yaboukir <yaboukir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 16:09:01 by yaboukir          #+#    #+#             */
-/*   Updated: 2025/02/15 14:29:34 by yaboukir         ###   ########.fr       */
+/*   Updated: 2025/02/15 16:09:32 by yaboukir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	ft_message_sig(int pid, char c)
 			ft_putstr_fd(RED "Invalid PID, Signal Error.\n" "\e[0m", 2);
 			exit(1);
 		}
-		usleep(505);
+		usleep(100);
 		bit++;
 	}
 }
@@ -69,19 +69,16 @@ int	main(int argc, char **argv)
 		pid = check_validation(argv[1]);
 		if (pid != 0)
 		{
-			ft_putstr_fd(GRN "PID IS VALID, reaching server...\n" "'\e[0m", 1);
+			ft_putstr_fd(GRN "PID IS VALID, Sending...\n" "\e[0m", 1);
 			while (argv[2][i])
-			{
-				ft_message_sig(pid, argv[2][i]);
-				i++;
-			}
+				ft_message_sig(pid, argv[2][i++]);
 			ft_message_sig(pid, '\0');
 		}
 	}
 	else
 	{
 		ft_putstr_fd(RED "invalid args or empty message.\n" "\e[0m", 2);
-		ft_putstr_fd(PUR "Usage: ./client [PID] [MSG]\n" "\e[0m", 2);
+		ft_putstr_fd(YLW "How to use: ./client [PID] [MSG]\n" "\e[0m", 2);
 	}
 	return (0);
 }

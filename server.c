@@ -6,7 +6,7 @@
 /*   By: yaboukir <yaboukir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 16:08:52 by yaboukir          #+#    #+#             */
-/*   Updated: 2025/02/15 14:13:42 by yaboukir         ###   ########.fr       */
+/*   Updated: 2025/02/15 16:08:02 by yaboukir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int	main(void)
 	struct sigaction	sig;
 
 	pid = getpid();
-	ft_putstr_fd(CY "SERVER PID IS : \e[0m", 1);
+	ft_putstr_fd(BLU "SERVER PID IS : \e[0m", 1);
 	ft_putnbr_fd(pid, 1);
 	ft_putstr_fd("\n" GRN "Waiting to respond...\n" "\e[0m", 1);
 	sig.sa_sigaction = ft_btoa;

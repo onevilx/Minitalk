@@ -6,7 +6,7 @@
 /*   By: yaboukir <yaboukir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 16:08:48 by yaboukir          #+#    #+#             */
-/*   Updated: 2025/02/15 14:08:47 by yaboukir         ###   ########.fr       */
+/*   Updated: 2025/02/15 16:07:41 by yaboukir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-# define PUR "\033[0;35m"
-# define CY "\033[0;36m"
+# define BLU "\033[0;34m"
+# define YLW "\033[0;33m"
 # define RED "\033[0;31m"
 # define GRN "\033[0;32m"
 

@@ -6,7 +6,7 @@
 /*   By: yaboukir <yaboukir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/15 12:34:01 by yaboukir          #+#    #+#             */
-/*   Updated: 2025/02/15 14:19:28 by yaboukir         ###   ########.fr       */
+/*   Updated: 2025/02/15 15:53:22 by yaboukir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,7 @@ void	write_buffer_and_msg(char *buffer, int *buffer_index, int pid)
 
 	i = 0;
 	while (i < *buffer_index)
-	{
-		ft_putchar_fd(buffer[i], 1);
-		i++;
-	}
+		ft_putchar_fd(buffer[i++], 1);
 	if (buffer[*buffer_index - 1] == '\0')
 	{
 		kill(pid, SIGUSR1);
@@ -68,7 +65,7 @@ int	main(void)
 	struct sigaction	sig;
 
 	pid = getpid();
-	ft_putstr_fd(CY "SERVER PID IS : \e[0m", 1);
+	ft_putstr_fd(BLU "SERVER PID IS : \e[0m", 1);
 	ft_putnbr_fd(pid, 1);
 	ft_putstr_fd("\n" GRN "Waiting to respond...\n" "\e[0m", 1);
 	sig.sa_sigaction = ft_btoa;
